@@ -108,8 +108,8 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, $rsqHeaders);
 $proxy = $proxys[array_rand($proxys)];
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
 curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
-curl_setopt($ch, CURLOPT_PROXYTYPE, CURLPROXY_HTTP);
-curl_setopt($ch, CURLOPT_PROXY, $proxy);
+//curl_setopt($ch, CURLOPT_PROXYTYPE, CURLPROXY_HTTP);
+//curl_setopt($ch, CURLOPT_PROXY, $proxy);
 
 $result = curl_exec($ch);
 if (curl_getinfo($ch, CURLINFO_HTTP_CODE) == '200') {
